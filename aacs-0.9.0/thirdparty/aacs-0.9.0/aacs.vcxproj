@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="config.h" />
+    <ClInclude Include="include\aacs.h" />
+    <ClInclude Include="include\attributes.h" />
+    <ClInclude Include="include\cci.h" />
+    <ClInclude Include="include\cci_data.h" />
+    <ClInclude Include="include\content_cert.h" />
+    <ClInclude Include="include\crypto.h" />
+    <ClInclude Include="include\dirs.h" />
+    <ClInclude Include="include\file.h" />
+    <ClInclude Include="include\filesystem.h" />
+    <ClInclude Include="include\keydb.h" />
+    <ClInclude Include="include\keydbcfg.h" />
+    <ClInclude Include="include\logging.h" />
+    <ClInclude Include="include\macro.h" />
+    <ClInclude Include="include\mkb.h" />
+    <ClInclude Include="include\mmc.h" />
+    <ClInclude Include="include\mmc_device.h" />
+    <ClInclude Include="include\path.h" />
+    <ClInclude Include="include\strutl.h" />
+    <ClInclude Include="include\unit_key.h" />
+    <ClInclude Include="keydbcfg-parser.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="keydbcfg-parser.c" />
+    <ClCompile Include="lex.yy.c" />
+    <ClCompile Include="src\file\dirs_win32.c" />
+    <ClCompile Include="src\file\file.c" />
+    <ClCompile Include="src\file\filesystem.c" />
+    <ClCompile Include="src\file\file_win32.c" />
+    <ClCompile Include="src\file\keydbcfg.c" />
+    <ClCompile Include="src\file\mmc_device_win32.c" />
+    <ClCompile Include="src\libaacs\aacs.c" />
+    <ClCompile Include="src\libaacs\cci.c" />
+    <ClCompile Include="src\libaacs\content_cert.c" />
+    <ClCompile Include="src\libaacs\crypto.c" />
+    <ClCompile Include="src\libaacs\mkb.c" />
+    <ClCompile Include="src\libaacs\mmc.c" />
+    <ClCompile Include="src\libaacs\unit_key.c" />
+    <ClCompile Include="src\util\logging.c" />
+    <ClCompile Include="src\util\strutl.c" />
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <VCProjectVersion>15.0</VCProjectVersion>
+    <ProjectGuid>{B192CF15-5D29-4BD9-A5F0-2BBB90DC2864}</ProjectGuid>
+    <Keyword>Win32Proj</Keyword>
+    <RootNamespace>staticlibtemplate</RootNamespace>
+    <WindowsTargetPlatformVersion>10.0.17763.0</WindowsTargetPlatformVersion>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v141</PlatformToolset>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>DynamicLibrary</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <PlatformToolset>v141</PlatformToolset>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <CharacterSet>Unicode</CharacterSet>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+  </ImportGroup>
+  <ImportGroup Label="Shared">
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <LinkIncremental>true</LinkIncremental>
+    <OutDir>$(SolutionDir)bin\$(Configuration)\</OutDir>
+    <IntDir>$(SolutionDir)..\Temp\$(SolutionName)\$(ProjectName)\$(Configuration)\</IntDir>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <LinkIncremental>false</LinkIncremental>
+    <OutDir>$(SolutionDir)bin\$(Configuration)\</OutDir>
+    <IntDir>$(SolutionDir)..\Temp\$(SolutionName)\$(ProjectName)\$(Configuration)\</IntDir>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>Disabled</Optimization>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>_CRT_SECURE_NO_WARNINGS;HAVE_CONFIG_H;__PRETTY_FUNCTION__=__FUNCTION__;fseeko=_fseeki64;ftello=_ftelli64;_WIN32_WINNT=0x0600;_DEBUG;_WINDOWS;</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <AdditionalIncludeDirectories>.;include;include\file;include\libaacs;include\util;$(SolutionDir)thirdparty\gcrypt-1.10.1\include;$(SolutionDir)thirdparty\gpg-error-1.45\include</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalLibraryDirectories>$(SolutionDir)lib\$(Configuration)\</AdditionalLibraryDirectories>
+      <ImportLibrary>$(SolutionDir)\lib\$(Configuration)\$(TargetName).lib</ImportLibrary>
+      <AdditionalDependencies>gcrypt.lib;gpg-error.lib;shell32.lib</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <ClCompile>
+      <WarningLevel>Level3</WarningLevel>
+      <Optimization>MaxSpeed</Optimization>
+      <FunctionLevelLinking>true</FunctionLevelLinking>
+      <IntrinsicFunctions>true</IntrinsicFunctions>
+      <SDLCheck>true</SDLCheck>
+      <PreprocessorDefinitions>_CRT_SECURE_NO_WARNINGS;HAVE_CONFIG_H;__PRETTY_FUNCTION__=__FUNCTION__;fseeko=_fseeki64;ftello=_ftelli64;_WIN32_WINNT=0x0600;NDEBUG;_WINDOWS;</PreprocessorDefinitions>
+      <ConformanceMode>true</ConformanceMode>
+      <AdditionalIncludeDirectories>.;include;include\file;include\libaacs;include\util;$(SolutionDir)thirdparty\gcrypt-1.10.1\include;$(SolutionDir)thirdparty\gpg-error-1.45\include</AdditionalIncludeDirectories>
+    </ClCompile>
+    <Link>
+      <SubSystem>Windows</SubSystem>
+      <EnableCOMDATFolding>true</EnableCOMDATFolding>
+      <OptimizeReferences>true</OptimizeReferences>
+      <GenerateDebugInformation>true</GenerateDebugInformation>
+      <AdditionalLibraryDirectories>$(SolutionDir)lib\$(Configuration)\</AdditionalLibraryDirectories>
+      <ImportLibrary>$(SolutionDir)\lib\$(Configuration)\$(TargetName).lib</ImportLibrary>
+      <AdditionalDependencies>gcrypt.lib;gpg-error.lib;shell32.lib</AdditionalDependencies>
+    </Link>
+  </ItemDefinitionGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

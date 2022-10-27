@@ -1,0 +1,132 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup>
+    <Filter Include="include">
+      <UniqueIdentifier>{56ff4465-c1f2-4954-99db-4ce328469fbd}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src">
+      <UniqueIdentifier>{cbc528b2-151a-4e96-b5f2-aeba5a37f62b}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\file">
+      <UniqueIdentifier>{2767415c-06b1-4ad2-a50d-cf5c2101bec0}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\libaacs">
+      <UniqueIdentifier>{9f66fd68-f2a5-4b79-8466-661e7d7f18fe}</UniqueIdentifier>
+    </Filter>
+    <Filter Include="src\util">
+      <UniqueIdentifier>{1b4fe9d5-af27-4168-b354-c7b28424dafd}</UniqueIdentifier>
+    </Filter>
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="include\aacs.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\attributes.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\cci.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\cci_data.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\content_cert.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\crypto.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\dirs.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\file.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\filesystem.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\keydb.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\keydbcfg.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\logging.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\macro.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\mkb.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\mmc.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\mmc_device.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\path.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\strutl.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="include\unit_key.h">
+      <Filter>include</Filter>
+    </ClInclude>
+    <ClInclude Include="config.h">
+      <Filter>src</Filter>
+    </ClInclude>
+    <ClInclude Include="keydbcfg-parser.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="src\file\dirs_win32.c">
+      <Filter>src\file</Filter>
+    </ClCompile>
+    <ClCompile Include="src\file\file.c">
+      <Filter>src\file</Filter>
+    </ClCompile>
+    <ClCompile Include="src\file\file_win32.c">
+      <Filter>src\file</Filter>
+    </ClCompile>
+    <ClCompile Include="src\file\filesystem.c">
+      <Filter>src\file</Filter>
+    </ClCompile>
+    <ClCompile Include="src\file\keydbcfg.c">
+      <Filter>src\file</Filter>
+    </ClCompile>
+    <ClCompile Include="src\file\mmc_device_win32.c">
+      <Filter>src\file</Filter>
+    </ClCompile>
+    <ClCompile Include="src\libaacs\aacs.c">
+      <Filter>src\libaacs</Filter>
+    </ClCompile>
+    <ClCompile Include="src\libaacs\cci.c">
+      <Filter>src\libaacs</Filter>
+    </ClCompile>
+    <ClCompile Include="src\libaacs\content_cert.c">
+      <Filter>src\libaacs</Filter>
+    </ClCompile>
+    <ClCompile Include="src\libaacs\crypto.c">
+      <Filter>src\libaacs</Filter>
+    </ClCompile>
+    <ClCompile Include="src\libaacs\mkb.c">
+      <Filter>src\libaacs</Filter>
+    </ClCompile>
+    <ClCompile Include="src\libaacs\mmc.c">
+      <Filter>src\libaacs</Filter>
+    </ClCompile>
+    <ClCompile Include="src\libaacs\unit_key.c">
+      <Filter>src\libaacs</Filter>
+    </ClCompile>
+    <ClCompile Include="src\util\logging.c">
+      <Filter>src\util</Filter>
+    </ClCompile>
+    <ClCompile Include="src\util\strutl.c">
+      <Filter>src\util</Filter>
+    </ClCompile>
+    <ClCompile Include="keydbcfg-parser.c" />
+    <ClCompile Include="lex.yy.c" />
+  </ItemGroup>
+</Project>
